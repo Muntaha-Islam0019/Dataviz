@@ -56,7 +56,9 @@ class TemperatureGraphApp(QWidget):
 
         self.figure.clear()
         ax = self.figure.add_subplot(111)
-        ax.plot(dates, temperatures)
+
+        ax.plot(dates, temperatures, 'b-')  # Line plot
+        ax.scatter(dates, temperatures, color='red', marker='o')  # Scatter points
 
         ax.set_xlabel('Date')
         ax.set_ylabel('Temperature')
